@@ -24,7 +24,7 @@ import java.util.Queue;
 /**
  * Base class for queue collection tests.
  *
- * @author Jared Levy
+ * @author Jared Levy .
  */
 @GwtCompatible
 public class AbstractQueueTester<E> extends AbstractCollectionTester<E> {
