@@ -162,4 +162,6 @@ public class DubuBaseTest {
     }
 
 
+
+    // precondition 까지 했음
 }
