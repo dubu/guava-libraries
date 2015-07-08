@@ -1,9 +1,9 @@
 package com.google.common.base;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -29,7 +29,7 @@ public class DubuBaseTest {
 
 
     @Test
-    public void asserThat(){
+    public void asserThatasfasf(){
 
         // google test liblary
         List<String> asf  = Lists.newArrayList("app", "bana" , "cc");
@@ -45,7 +45,6 @@ public class DubuBaseTest {
         DOO
     }
 
-
     @Test
     public void numsTest(){
 
@@ -56,6 +55,25 @@ public class DubuBaseTest {
         }else{
             logger.info("fail");
         }
+    }
+
+    @Test
+    public void afjlasjd(){
+
+
+        //ImmutableList<String> a = Lists.newArrayList("aa","bb");
+
+        List<String> b = Lists.newArrayList("aa","bb");
+
+
+        List<String> asfd = ImmutableList.of("aa" , "bb");
+
+
+        assertThat(b).isEqualTo(asfd);
+
+
+
+
     }
 
 
