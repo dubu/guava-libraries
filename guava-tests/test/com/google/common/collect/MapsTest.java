@@ -97,8 +97,8 @@ public class MapsTest extends TestCase {
     original.put("a", 1);
     original.put("b", 2);
     original.put("c", 3);
-    HashMap<Object, Object> map =
-        Maps.newHashMap((Map<? extends Object, ? extends Object>) original);
+    HashMap<String, Object> map =
+        Maps.newHashMap((Map< ? extends  String,  ? extends  Object>) original);
     assertEquals(original, map);
   }
 
