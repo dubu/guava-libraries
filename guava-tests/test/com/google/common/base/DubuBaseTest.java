@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.truth.Truth.assertThat;
@@ -127,7 +129,7 @@ public class DubuBaseTest {
 
 
     @Test
-    public void logListToStrigList(){
+    public void convertStringListToIntList(){
 
 
         List<String> strList = ImmutableList.of("123" , "435");
@@ -158,10 +160,22 @@ public class DubuBaseTest {
 
 
         List<String> aa = ImmutableList.of("aaaa" , "bbbb" , "11");
-        logger.info(Joiner.on(",,").join(aa));
+        logger.info(Joiner.on(",").join(aa));
+
+    }
+
+    @Test
+    public void testRegx(){
+
+        Pattern p = Pattern.compile("(http|https)://.*.net/article/([0-9]+)$");
+        Matcher m = p.matcher("http://dubu.net/article/72");
+
+        if(m.matches()){
+            System.out.println(m.group());
+            System.out.println(m.group(1));
+            System.out.println(m.group(2));
+        }
     }
 
 
-
-    // precondition 까지 했음
 }
