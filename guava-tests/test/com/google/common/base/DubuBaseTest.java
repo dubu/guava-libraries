@@ -177,5 +177,36 @@ public class DubuBaseTest {
         }
     }
 
+    @Test
+    public void subStringByte(){
+
+        String simple = " 郭郭郭郭한글 포함한 한 글  adsfadf  asd f af  1 1 1  1" +
+                "121212 1 2" +
+                "   hello";
+        Iterable<String> letters = Splitter.fixedLength(2).split(simple);
+        final Iterator<String> iterator = letters.iterator();
+        while (iterator.hasNext()) {
+            String next =  iterator.next();
+            
+        }
+
+
+        for (String l : letters){
+            System.out.println(l);
+        }
+
+
+
+
+    }
+
+
+    @Test
+    public void testSub(){
+
+        System.out.println("unhappy".substring(0,2) );
+        System.out.println("한글".substring(0,2));
+    }
+
 
 }
